@@ -81,18 +81,27 @@ WSGI_APPLICATION = 'geo_analytics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Use PostgreSQL for production
+#         'NAME': 'geoanalytics',
+#         'USER': 'geoanalytics1',
+#         'PASSWORD': os.environ.get('DB_PASSWORD', ''),  # Use environment variable for
+#         'HOST':'localhost',
+#          'PORT': '' # Ensure the database file is created in the base directory
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Use PostgreSQL for production
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'geoanalytics',
         'USER': 'geoanalytics1',
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),  # Use environment variable for
-        'HOST':'localhost',
-         'PORT': '' # Ensure the database file is created in the base directory
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),  # Make sure this env variable is set
+        'HOST': 'localhost',
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
