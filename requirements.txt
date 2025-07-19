@@ -108,6 +108,3 @@ webencodings==0.5.1
 websocket-client==1.8.0
 xlsxwriter==3.2.5
 xlwings==0.33.15
-psycopg2-binary==2.9.9
-python-dotenv==1.0.1
-gunicorn==21.2.0
