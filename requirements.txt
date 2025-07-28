@@ -1,6 +1,0 @@
-Django==5.2.3
-gunicorn==21.2.0
-whitenoise==6.6.0
-psycopg2-binary==2.9.9      # Only if using PostgreSQL
-python-dotenv==1.0.1        # If using .env for secret settings
-pandas==2.2.2
